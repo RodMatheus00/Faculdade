@@ -38,3 +38,5 @@ jobs:
       - name: Validar sintaxe JavaScript
         run: |
           find "$PROJECT_DIR" -name "*.js" -print0 | xargs -0 -I{} node --check "{}"
+      - name: Executar testes unitarios
+        run: node --test "$PROJECT_DIR/tests/script.test.js"

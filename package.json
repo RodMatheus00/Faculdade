@@ -1,0 +1,8 @@
+{
+  "name": "faculdade-devops-actions",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test DevOps/DevOps.Atividades/tests/script.test.js"
+  }
+}
