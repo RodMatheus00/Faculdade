@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" role="img" aria-labelledby="titulo desc">
+  <title id="titulo">Planeta sustentável</title>
+  <desc id="desc">Ilustração de planeta, folhas e elementos digitais</desc>
+  <defs>
+    <linearGradient id="planeta" x1="150" y1="90" x2="520" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9be7b0"/>
+      <stop offset="1" stop-color="#1f8a4c"/>
+    </linearGradient>
+    <linearGradient id="ceu" x1="100" y1="40" x2="550" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e9fff0"/>
+      <stop offset="1" stop-color="#c2f0ce"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="40" width="600" height="480" rx="70" fill="url(#ceu)"/>
+  <circle cx="342" cy="288" r="150" fill="url(#planeta)"/>
+  <path d="M235 225c50-45 117-51 181-25-42 28-78 31-128 25-23-3-37 2-53 0Z" fill="#f4fbf6" opacity=".92"/>
+  <path d="M230 333c52 25 102 21 153 3 30-11 58-8 82 12-58 70-172 88-235-15Z" fill="#f4fbf6" opacity=".9"/>
+  <path d="M274 143c-12-54 12-80 52-91 9 42-7 76-52 91Z" fill="#1f8a4c"/>
+  <path d="M405 123c37-43 75-41 108-16-32 38-69 46-108 16Z" fill="#72d892"/>
+  <path d="M465 420c58-5 87 22 98 62-48 5-84-13-98-62Z" fill="#146335"/>
+  <g fill="none" stroke="#146335" stroke-width="8" stroke-linecap="round" opacity=".55">
+    <path d="M132 157h78"/>
+    <path d="M112 194h50"/>
+    <path d="M500 170h52"/>
+    <path d="M523 207h72"/>
+    <path d="M106 410h82"/>
+    <path d="M508 376h58"/>
+  </g>
+  <g fill="#fff" opacity=".92">
+    <circle cx="151" cy="142" r="13"/>
+    <circle cx="543" cy="144" r="10"/>
+    <circle cx="565" cy="400" r="14"/>
+    <circle cx="152" cy="392" r="9"/>
+  </g>
+</svg>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGuia | Sobre</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <nav class="menu container" aria-label="Menu principal">
+      <a class="marca" href="index.html" aria-label="Ir para a página inicial">
+        <img src="images/logo.svg" alt="Logo EcoGuia">
+        <span>EcoGuia</span>
+      </a>
+
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Formulário</a></li>
+        <li><a href="formAction.html">Dados</a></li>
+        <li><a href="about.html" class="ativo">Sobre</a></li>
+      </ul>
+
+      <button class="tema-botao" id="temaBotao" type="button" aria-label="Alternar tema claro e escuro">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container pagina">
+    <section class="sobre-grid">
+      <div>
+        <p class="etiqueta">Sobre o projeto</p>
+        <h1>Apresentação do trabalho</h1>
+        <p>
+          Este site foi desenvolvido para a Atividade Somativa 1, com tratamento exclusivo de front-end.
+          O projeto utiliza apenas HTML, CSS e JavaScript, sem frameworks, bibliotecas externas ou plataformas de código.
+        </p>
+        <p>
+          <strong>Autor(a):</strong> Seu Nome<br>
+          <strong>Tema:</strong> Sustentabilidade e hábitos conscientes<br>
+          <strong>Objetivo:</strong> demonstrar estruturação HTML, estilização CSS, navegação uniforme e interação com JavaScript.
+        </p>
+      </div>
+      <img src="images/about.svg" alt="Ilustração de pessoa analisando um site">
+    </section>
+
+    <section class="secao">
+      <div class="titulo-secao">
+        <p class="etiqueta">Tecnologias</p>
+        <h2>O que foi aplicado?</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card aparecer">
+          <span class="icone">HTML</span>
+          <h3>Estrutura</h3>
+          <p>
+            Foram usados elementos semânticos como header, nav, main, section, article, form, fieldset e footer.
+            As páginas principais são index.html, form.html, formAction.html e about.html.
+          </p>
+        </article>
+
+        <article class="card aparecer">
+          <span class="icone">CSS</span>
+          <h3>Apresentação</h3>
+          <p>
+            O arquivo css/style.css centraliza as regras visuais, com classes reutilizáveis, responsividade,
+            botões, cards, formulário e tema escuro.
+          </p>
+        </article>
+
+        <article class="card aparecer">
+          <span class="icone">JS</span>
+          <h3>Interação</h3>
+          <p>
+            Os arquivos JavaScript controlam menu responsivo, alternância de tema, modal, validação de campos
+            e leitura de parâmetros enviados por GET.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao painel-codigo">
+      <h2>Organização das pastas</h2>
+      <pre><code>ecoguia_site/
+├── index.html
+├── form.html
+├── formAction.html
+├── about.html
+├── css/
+│   └── style.css
+├── js/
+│   ├── main.js
+│   ├── form.js
+│   └── action.js
+└── images/
+    ├── logo.svg
+    ├── hero.svg
+    └── about.svg</code></pre>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>EcoGuia © 2026 — Site acadêmico desenvolvido com HTML, CSS e JavaScript puro.</p>
+  </footer>
+</body>
+</html>

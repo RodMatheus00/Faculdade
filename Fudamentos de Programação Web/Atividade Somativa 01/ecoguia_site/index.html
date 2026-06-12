@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGuia | Início</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <nav class="menu container" aria-label="Menu principal">
+      <a class="marca" href="index.html" aria-label="Ir para a página inicial">
+        <img src="images/logo.svg" alt="Logo EcoGuia">
+        <span>EcoGuia</span>
+      </a>
+
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="index.html" class="ativo">Início</a></li>
+        <li><a href="form.html">Formulário</a></li>
+        <li><a href="formAction.html">Dados</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+
+      <button class="tema-botao" id="temaBotao" type="button" aria-label="Alternar tema claro e escuro">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-texto">
+        <p class="etiqueta">Projeto Somativo 1</p>
+        <h1>Pequenas atitudes para um cotidiano mais sustentável</h1>
+        <p>
+          O EcoGuia é um pequeno site criado com HTML, CSS e JavaScript puro.
+          Aqui você encontra dicas rápidas, navegação uniforme e interação dinâmica no lado do cliente.
+        </p>
+        <div class="acoes">
+          <a class="botao principal" href="form.html">Participar do desafio</a>
+          <button class="botao secundario" id="abrirDica" type="button">Ver dica do dia</button>
+        </div>
+      </div>
+      <img class="hero-img" src="images/hero.svg" alt="Ilustração de planeta com folhas e tecnologia">
+    </section>
+
+    <section class="container secao">
+      <div class="titulo-secao">
+        <p class="etiqueta">Conteúdo</p>
+        <h2>Como o site funciona?</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card aparecer">
+          <span class="icone">🌱</span>
+          <h3>Informação</h3>
+          <p>Apresenta orientações simples sobre consumo consciente, economia de recursos e descarte correto.</p>
+        </article>
+
+        <article class="card aparecer">
+          <span class="icone">📝</span>
+          <h3>Formulário</h3>
+          <p>Coleta dados do visitante usando campos obrigatórios, padrões de entrada e validação em JavaScript.</p>
+        </article>
+
+        <article class="card aparecer">
+          <span class="icone">⚙️</span>
+          <h3>JavaScript</h3>
+          <p>Controla menu responsivo, tema claro/escuro, janela modal e leitura dos dados enviados por GET.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container secao destaque">
+      <div>
+        <p class="etiqueta">Desafio</p>
+        <h2>Escolha uma ação sustentável para praticar esta semana</h2>
+        <p>
+          A proposta é incentivar mudanças pequenas, mas constantes. Use o formulário para indicar
+          seus interesses e receber uma sugestão personalizada na página de retorno.
+        </p>
+      </div>
+      <a class="botao principal" href="form.html">Responder agora</a>
+    </section>
+  </main>
+
+  <div class="modal" id="modalDica" aria-hidden="true" role="dialog" aria-labelledby="tituloModal">
+    <div class="modal-conteudo">
+      <button class="fechar" id="fecharDica" aria-label="Fechar janela">×</button>
+      <h2 id="tituloModal">Dica do dia</h2>
+      <p id="textoDica">
+        Separe 10 minutos para revisar lâmpadas, torneiras e aparelhos ligados sem necessidade.
+        Economizar energia e água também reduz custos.
+      </p>
+    </div>
+  </div>
+
+  <footer class="rodape">
+    <p>EcoGuia © 2026 — Site acadêmico desenvolvido com HTML, CSS e JavaScript puro.</p>
+  </footer>
+</body>
+</html>

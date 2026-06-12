@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGuia | Formulário</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <nav class="menu container" aria-label="Menu principal">
+      <a class="marca" href="index.html" aria-label="Ir para a página inicial">
+        <img src="images/logo.svg" alt="Logo EcoGuia">
+        <span>EcoGuia</span>
+      </a>
+
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html" class="ativo">Formulário</a></li>
+        <li><a href="formAction.html">Dados</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+
+      <button class="tema-botao" id="temaBotao" type="button" aria-label="Alternar tema claro e escuro">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container pagina">
+    <section class="cabecalho-pagina">
+      <p class="etiqueta">Cadastro</p>
+      <h1>Formulário do Desafio EcoGuia</h1>
+      <p>
+        Preencha todos os campos. O formulário envia os dados pelo método GET para a página
+        <strong>formAction.html</strong>, onde eles serão lidos com JavaScript.
+      </p>
+    </section>
+
+    <section class="form-card">
+      <form id="ecoForm" action="formAction.html" method="GET" novalidate>
+        <div class="grade-form">
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex.: Maria Silva" required minlength="3" maxlength="60">
+            <small class="erro" id="erro-nome"></small>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seunome@email.com" required>
+            <small class="erro" id="erro-email"></small>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required maxlength="15">
+            <small class="erro" id="erro-telefone"></small>
+          </div>
+
+          <div class="campo">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Ex.: São Paulo" required maxlength="50">
+            <small class="erro" id="erro-cidade"></small>
+          </div>
+
+          <div class="campo">
+            <label for="data">Data para começar o desafio</label>
+            <input type="date" id="data" name="data" required>
+            <small class="erro" id="erro-data"></small>
+          </div>
+
+          <div class="campo">
+            <label for="perfil">Perfil sustentável</label>
+            <select id="perfil" name="perfil" required>
+              <option value="">Selecione uma opção</option>
+              <option value="iniciante">Iniciante</option>
+              <option value="intermediario">Intermediário</option>
+              <option value="avancado">Avançado</option>
+            </select>
+            <small class="erro" id="erro-perfil"></small>
+          </div>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Área de maior interesse</legend>
+          <div class="opcoes">
+            <label><input type="radio" name="interesse" value="Economia de água" required> Economia de água</label>
+            <label><input type="radio" name="interesse" value="Energia limpa"> Energia limpa</label>
+            <label><input type="radio" name="interesse" value="Reciclagem"> Reciclagem</label>
+          </div>
+          <small class="erro" id="erro-interesse"></small>
+        </fieldset>
+
+        <fieldset class="campo">
+          <legend>Temas que você quer acompanhar</legend>
+          <div class="opcoes">
+            <label><input type="checkbox" name="temas" value="Consumo consciente"> Consumo consciente</label>
+            <label><input type="checkbox" name="temas" value="Horta em casa"> Horta em casa</label>
+            <label><input type="checkbox" name="temas" value="Transporte sustentável"> Transporte sustentável</label>
+          </div>
+          <small class="erro" id="erro-temas"></small>
+        </fieldset>
+
+        <div class="campo">
+          <label for="mensagem">Comentário</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte qual atitude sustentável você quer melhorar." required minlength="20" maxlength="300"></textarea>
+          <div class="linha-ajuda">
+            <small class="erro" id="erro-mensagem"></small>
+            <small id="contador">0/300</small>
+          </div>
+        </div>
+
+        <div class="campo termos">
+          <label>
+            <input type="checkbox" id="termos" name="termos" value="Aceito" required>
+            Confirmo que os dados foram preenchidos corretamente.
+          </label>
+          <small class="erro" id="erro-termos"></small>
+        </div>
+
+        <div class="acoes-form">
+          <button class="botao principal" type="submit">Enviar dados</button>
+          <button class="botao secundario" type="reset">Limpar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>EcoGuia © 2026 — Site acadêmico desenvolvido com HTML, CSS e JavaScript puro.</p>
+  </footer>
+</body>
+</html>

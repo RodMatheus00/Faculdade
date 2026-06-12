@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGuia | Dados recebidos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/action.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <nav class="menu container" aria-label="Menu principal">
+      <a class="marca" href="index.html" aria-label="Ir para a página inicial">
+        <img src="images/logo.svg" alt="Logo EcoGuia">
+        <span>EcoGuia</span>
+      </a>
+
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Formulário</a></li>
+        <li><a href="formAction.html" class="ativo">Dados</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+
+      <button class="tema-botao" id="temaBotao" type="button" aria-label="Alternar tema claro e escuro">🌙</button>
+    </nav>
+  </header>
+
+  <main class="container pagina">
+    <section class="cabecalho-pagina">
+      <p class="etiqueta">Retorno</p>
+      <h1>Dados recebidos via GET</h1>
+      <p>
+        Esta página usa JavaScript para ler os parâmetros da URL enviados pelo formulário.
+      </p>
+    </section>
+
+    <section class="resultado-card" id="resultado">
+      <h2>Resumo da inscrição</h2>
+      <div id="dadosRecebidos" class="dados-recebidos"></div>
+      <div id="sugestao" class="sugestao"></div>
+      <a class="botao secundario" href="form.html">Voltar ao formulário</a>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>EcoGuia © 2026 — Site acadêmico desenvolvido com HTML, CSS e JavaScript puro.</p>
+  </footer>
+</body>
+</html>

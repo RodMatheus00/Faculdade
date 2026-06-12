@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="titulo desc">
+  <title id="titulo">Apresentação do projeto</title>
+  <desc id="desc">Pessoa analisando tela de computador com elementos de código</desc>
+  <defs>
+    <linearGradient id="fundo" x1="34" y1="20" x2="520" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#dff6e7"/>
+      <stop offset="1" stop-color="#9be7b0"/>
+    </linearGradient>
+  </defs>
+  <rect x="28" y="28" width="504" height="424" rx="58" fill="url(#fundo)"/>
+  <rect x="113" y="90" width="334" height="220" rx="24" fill="#17241c"/>
+  <rect x="137" y="118" width="286" height="166" rx="15" fill="#f4fbf6"/>
+  <path d="M176 164h95M176 201h160M176 238h118" stroke="#1f8a4c" stroke-width="14" stroke-linecap="round"/>
+  <path d="M337 154l32 32-32 32M254 154l-32 32 32 32" fill="none" stroke="#146335" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M255 310h50l18 52h-86l18-52Z" fill="#17241c"/>
+  <rect x="196" y="360" width="168" height="26" rx="13" fill="#17241c"/>
+  <circle cx="147" cy="358" r="37" fill="#1f8a4c"/>
+  <path d="M131 401c9-31 54-31 65 0" fill="#146335"/>
+  <path d="M148 352c34-28 58-28 88-12" stroke="#146335" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="406" cy="345" r="22" fill="#72d892"/>
+  <path d="M421 366c23 1 43 14 52 35" stroke="#146335" stroke-width="14" stroke-linecap="round"/>
+</svg>
