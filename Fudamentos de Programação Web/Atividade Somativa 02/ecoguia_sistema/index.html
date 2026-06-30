@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGuia | Gestao de Projetos Ambientais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark bg-ecoguia shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-tree-fill me-2"></i>EcoGuia
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="auth/login.php">Entrar</a></li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-light btn-sm ms-lg-2 px-3" href="auth/cadastro.php">Cadastrar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow-1">
+    <section class="container py-5">
+        <div class="hero-ecoguia text-center mb-5">
+            <h1 class="display-5 fw-bold mb-3">
+                <i class="bi bi-tree-fill me-2"></i>EcoGuia
+            </h1>
+            <p class="lead mb-4">
+                Sistema web para gestao de projetos ambientais &mdash; reflorestamento, reciclagem e educacao ecologica.
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="auth/login.php" class="btn btn-light btn-lg px-4">
+                    <i class="bi bi-box-arrow-in-right me-2"></i>Acessar o sistema
+                </a>
+                <a href="auth/cadastro.php" class="btn btn-outline-light btn-lg px-4">
+                    <i class="bi bi-person-plus me-2"></i>Criar conta
+                </a>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-ecoguia h-100 text-center p-4">
+                    <i class="bi bi-folder2-open display-4 text-success mb-3"></i>
+                    <h3 class="h5">Categorias</h3>
+                    <p class="text-muted mb-0">Organize projetos por tipo: reflorestamento, reciclagem, educacao ambiental e mais.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-ecoguia h-100 text-center p-4">
+                    <i class="bi bi-kanban display-4 text-success mb-3"></i>
+                    <h3 class="h5">Projetos</h3>
+                    <p class="text-muted mb-0">Cadastre, acompanhe e gerencie o status de cada iniciativa ambiental.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-ecoguia h-100 text-center p-4">
+                    <i class="bi bi-shield-lock display-4 text-success mb-3"></i>
+                    <h3 class="h5">Acesso seguro</h3>
+                    <p class="text-muted mb-0">Somente usuarios autenticados podem acessar as funcionalidades de CRUD.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-ecoguia-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+        <p class="mb-0"><strong>EcoGuia</strong> &mdash; Matheus Rodrigues</p>
+        <small class="text-white-50">HTML &bull; CSS &bull; Bootstrap &bull; JavaScript &bull; PHP &bull; MySQL</small>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

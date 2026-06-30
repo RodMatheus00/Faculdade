@@ -1,0 +1,71 @@
+/* EcoGuia - Estilos personalizados (complemento ao Bootstrap) */
+
+:root {
+    --ecoguia-verde: #1f8a4c;
+    --ecoguia-verde-escuro: #146335;
+    --ecoguia-verde-claro: #dff6e7;
+    --ecoguia-fundo: #f4fbf6;
+}
+
+body {
+    background-color: var(--ecoguia-fundo);
+}
+
+.bg-ecoguia {
+    background-color: var(--ecoguia-verde) !important;
+}
+
+.bg-ecoguia-dark {
+    background-color: var(--ecoguia-verde-escuro) !important;
+}
+
+.btn-ecoguia {
+    background-color: var(--ecoguia-verde);
+    border-color: var(--ecoguia-verde);
+    color: #fff;
+}
+
+.btn-ecoguia:hover {
+    background-color: var(--ecoguia-verde-escuro);
+    border-color: var(--ecoguia-verde-escuro);
+    color: #fff;
+}
+
+.hero-ecoguia {
+    background: linear-gradient(135deg, var(--ecoguia-verde) 0%, var(--ecoguia-verde-escuro) 100%);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+}
+
+.card-ecoguia {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(31, 138, 76, 0.12);
+}
+
+.card-ecoguia .card-header {
+    background-color: var(--ecoguia-verde-claro);
+    border-bottom: 2px solid var(--ecoguia-verde);
+    font-weight: 600;
+    border-radius: 1rem 1rem 0 0 !important;
+}
+
+.badge-status-planejado { background-color: #6c757d; }
+.badge-status-em_andamento { background-color: #0d6efd; }
+.badge-status-concluido { background-color: var(--ecoguia-verde); }
+
+.tabela-acoes .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.campo-invalido {
+    border-color: #dc3545 !important;
+}
+
+.mensagem-erro-campo {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
