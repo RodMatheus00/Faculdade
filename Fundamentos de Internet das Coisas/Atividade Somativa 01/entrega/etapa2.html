@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Etapa 2 - Configuracao do ESP32</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+  <div class="disciplina">Fundamentos de Internet das Coisas</div>
+  <h1>Atividade Somativa 1 &mdash; Etapa 2: Configuração do ESP32</h1>
+  <div class="identificacao">
+    <span><strong>Aluno:</strong> Matheus Rodrigues</span>
+    <span><strong>Modalidade:</strong> B &mdash; Simulador</span>
+    <span><strong>Data:</strong> 28/08/2026</span>
+  </div>
+</header>
+
+<h2>1. Objetivo</h2>
+<p>
+  Configurar o microcontrolador ESP32 para a execução de código em MicroPython e comprovar,
+  por meio do console Shell (REPL), que a placa foi reconhecida e está pronta para receber e
+  executar programas.
+</p>
+
+<h2>2. Montagem do circuito</h2>
+<p>
+  Antes da verificação do firmware, o circuito foi montado no editor de diagrama do Wokwi,
+  conectando o sensor DHT ao ESP32 conforme a tabela abaixo. O pino de dados foi ligado ao
+  GPIO 15, escolhido por ser um pino digital de uso geral livre na placa.
+</p>
+<table>
+  <tr><th>Pino do sensor DHT</th><th>Pino do ESP32</th><th>Cor do fio</th><th>Função</th></tr>
+  <tr><td>VCC</td><td>3V3</td><td>Vermelho</td><td>Alimentação 3,3 V</td></tr>
+  <tr><td>GND</td><td>GND</td><td>Preto</td><td>Referência de terra</td></tr>
+  <tr><td>SDA (DATA)</td><td>GPIO 15</td><td>Verde</td><td>Barramento digital de dados</td></tr>
+</table>
+
+<h2>3. Verificação do firmware MicroPython</h2>
+<p>
+  Com a simulação em execução, o script foi interrompido para acesso ao prompt interativo
+  <em>&gt;&gt;&gt;</em> do MicroPython. Nele foram executados os comandos a seguir, que
+  identificam a implementação da linguagem, o modelo da placa, a frequência do processador,
+  o identificador único do chip e os arquivos presentes no sistema de arquivos interno.
+</p>
+
+<pre>&gt;&gt;&gt; import sys, os, machine
+&gt;&gt;&gt; print(sys.implementation)
+(name='micropython', version=(1, 28, 0, ''), _machine='Generic ESP32 module with ESP32',
+ _mpy=11014, _build='ESP32_GENERIC')
+&gt;&gt;&gt; print(os.uname())
+(sysname='esp32', nodename='esp32', release='1.28.0', version='v1.28.0 on 2026-04-06',
+ machine='Generic ESP32 module with ESP32')
+&gt;&gt;&gt; print('CPU:', machine.freq(), 'Hz | ID:', machine.unique_id())
+CPU: 160000000 Hz | ID: b'\x5c\xe4\x00\xc0\x01\x10'
+&gt;&gt;&gt; print('Arquivos no ESP32:', os.listdir())
+Arquivos no ESP32: ['diagram.json', 'main.py']</pre>
+
+<p>
+  As respostas confirmam que o firmware MicroPython v1.28.0 está ativo sobre um módulo ESP32,
+  operando a 160 MHz, com o sistema de arquivos acessível e contendo o programa
+  <em>main.py</em>. O ambiente está, portanto, pronto para a execução do código da Etapa 3.
+</p>
+
+<h2>4. Evidência</h2>
+<figure>
+  <img src="../prints/etapa2-repl.png" alt="Console REPL do MicroPython no ESP32">
+  <figcaption>
+    Figura 1 &mdash; Console Shell (REPL) do MicroPython respondendo aos comandos de
+    identificação, comprovando que o ESP32 foi reconhecido e está pronto para execução do
+    código. À direita, o circuito montado com o ESP32 e o sensor DHT ligado ao GPIO 15.
+  </figcaption>
+</figure>
+
+</body>
+</html>

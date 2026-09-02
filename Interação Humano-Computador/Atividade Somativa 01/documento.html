@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>IHC - Atividade Somativa 01</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<!-- ============================= CAPA ============================= -->
+<section class="capa">
+  <div class="instituicao">Curso de Graduação &middot; Atividade Somativa 01</div>
+
+  <div class="disciplina">Interação Humano-Computador</div>
+  <h1>Personas e Mapa da Jornada do Usuário</h1>
+  <div class="subtitulo">
+    Fase 1 do projeto da disciplina<br>
+    Sistema de orçamento e acompanhamento de serviços<br>para pequenas oficinas mecânicas
+  </div>
+  <div class="regua"></div>
+
+  <div class="integrantes">
+    <strong>Integrantes do grupo</strong>
+    <ul>
+      <li>Matheus Rodrigues</li>
+      <li>[Nome do integrante 2]</li>
+      <li>[Nome do integrante 3]</li>
+      <li>[Nome do integrante 4]</li>
+    </ul>
+  </div>
+
+  <div class="rodape">Agosto de 2026</div>
+</section>
+
+<!-- ====================== 1. APRESENTACAO ======================== -->
+<section>
+  <div class="linha-titulo"><h2><span class="num">1.</span>Apresentação do projeto</h2></div>
+
+  <h3>1.1 Contexto</h3>
+  <p>
+    Pequenas oficinas mecânicas de bairro representam a maior parte do setor de reparo
+    automotivo no Brasil e costumam operar com estruturas enxutas: o proprietário acumula as
+    funções de mecânico, orçamentista, atendente e gestor financeiro, apoiado por um ou dois
+    funcionários. Nesse cenário, o controle dos serviços é feito de maneira informal, por meio
+    de cadernos, blocos de orçamento em papel, planilhas improvisadas e conversas de
+    WhatsApp que se perdem no histórico.
+  </p>
+  <p>
+    A consequência dessa informalidade aparece nas duas pontas. Do lado da oficina, há
+    retrabalho, orçamentos refeitos, peças esquecidas, dificuldade de saber quanto realmente se
+    lucrou no mês e perda de clientes por demora na resposta. Do lado do cliente, há a
+    sensação recorrente de falta de transparência: ele deixa o carro, não sabe o que está sendo
+    feito, precisa telefonar para obter notícias e frequentemente recebe um valor final diferente
+    do combinado.
+  </p>
+
+  <h3>1.2 Problema identificado</h3>
+  <div class="destaque">
+    Pequenas oficinas mecânicas não possuem um meio simples de registrar, orçar e comunicar o
+    andamento dos serviços, o que gera perda de controle operacional e financeiro para o
+    proprietário e insegurança para o cliente, que fica sem informação durante todo o período em
+    que seu veículo está na oficina.
+  </div>
+
+  <h3>1.3 Objetivo da solução</h3>
+  <p>
+    Desenvolver um sistema simples, de uso móvel e com baixa curva de aprendizado, que permita
+    à oficina montar orçamentos de forma padronizada, registrar o andamento de cada serviço em
+    poucos toques e compartilhar automaticamente esse andamento com o cliente por meio de um
+    link de acompanhamento, sem exigir que o cliente instale qualquer aplicativo.
+  </p>
+
+  <h3>1.4 Método aplicado nesta fase</h3>
+  <p>
+    Esta entrega consolida os artefatos de descoberta produzidos entre as semanas 1 e 3. Partimos
+    do <strong>storytelling</strong> no formato Pixar, que estrutura o problema em forma de
+    narrativa e ajuda o grupo a manter o foco na dor real do usuário. Desse relato extraímos as
+    <strong>personas</strong>, arquétipos que representam os grupos de usuários com necessidades
+    distintas. Por fim, para cada persona construímos o <strong>mapa da jornada do usuário</strong>,
+    que detalha fase a fase as ações, pensamentos, emoções, pontos de contato, dores e
+    oportunidades de projeto.
+  </p>
+</section>
+
+<!-- ====================== 2. STORYTELLING ======================== -->
+<section class="secao">
+  <div class="linha-titulo"><h2><span class="num">2.</span>Storytelling &mdash; modelo Pixar</h2></div>
+  <p>
+    Artefato produzido na Atividade Formativa 01 e aqui anexado, conforme solicitado no enunciado.
+    O modelo Pixar organiza a narrativa em seis movimentos, partindo da rotina do personagem até
+    a transformação provocada pela solução.
+  </p>
+
+  <table class="pixar">
+    <tr>
+      <td class="rotulo">Era uma vez&hellip;</td>
+      <td>
+        &hellip;o Sérgio, dono da <em>Auto Mecânica São Jorge</em>, uma oficina de bairro com dois
+        funcionários que ele mantém há dezoito anos. Sérgio é um excelente mecânico, conhecido
+        na região por resolver problemas que ninguém mais resolve, e conquistou sua clientela na
+        base da confiança e do boca a boca.
+      </td>
+    </tr>
+    <tr>
+      <td class="rotulo">Todos os dias&hellip;</td>
+      <td>
+        &hellip;ele abre a oficina às sete da manhã, recebe os primeiros carros e anota tudo em um
+        caderno pautado que fica sobre a bancada: placa do veículo, nome do cliente, o que ele
+        reclamou e o valor que combinaram. Ao longo do dia atende o telefone, sai para comprar
+        peças, orça serviços de cabeça e ainda coloca a mão na graxa quando o serviço aperta.
+      </td>
+    </tr>
+    <tr>
+      <td class="rotulo">Um dia&hellip;</td>
+      <td>
+        &hellip;uma cliente chegou irritada para buscar o carro. Ela havia ligado três vezes
+        durante a semana sem conseguir saber o que estava acontecendo, e o valor cobrado na
+        entrega ficou quase quatrocentos reais acima do que ela lembrava ter combinado. Sérgio
+        procurou a anotação no caderno e encontrou apenas <em>"revisão + freio"</em>, escrito às
+        pressas, sem o detalhamento das peças que precisaram ser trocadas no meio do caminho.
+      </td>
+    </tr>
+    <tr>
+      <td class="rotulo">Por causa disso&hellip;</td>
+      <td>
+        &hellip;ele não conseguiu comprovar o que havia sido acordado, precisou conceder um desconto
+        para não perder a cliente e passou a noite refazendo as contas do mês. Foi então que
+        percebeu um padrão: não sabia dizer quantos serviços tinha em andamento naquele momento,
+        quais orçamentos estavam esperando aprovação, nem quanto de fato havia sobrado no caixa.
+      </td>
+    </tr>
+    <tr>
+      <td class="rotulo">Por causa disso&hellip;</td>
+      <td>
+        &hellip;Sérgio começou a recusar serviços por medo de não dar conta, enquanto seu mecânico
+        Diego perdia tempo procurando o caderno para saber qual carro atacar primeiro e a
+        clientela migrava para uma concessionária que, embora mais cara, enviava mensagens
+        automáticas informando cada etapa do reparo.
+      </td>
+    </tr>
+    <tr>
+      <td class="rotulo">Até que finalmente&hellip;</td>
+      <td>
+        &hellip;a oficina passou a usar um sistema pensado para a sua realidade: o orçamento é
+        montado no celular a partir de uma lista de serviços e peças, o cliente aprova pelo próprio
+        telefone e acompanha o andamento por um link, e cada alteração no serviço fica registrada
+        com data e valor. Sérgio voltou a ter clareza do que acontece na sua oficina, Diego sabe
+        exatamente o que fazer sem precisar interromper o chefe, e o cliente deixa de ligar para
+        cobrar notícias porque as notícias chegam até ele.
+      </td>
+    </tr>
+  </table>
+</section>
+
+<!-- ======================== 3. PERSONAS ========================== -->
+<section class="secao">
+  <div class="linha-titulo"><h2><span class="num">3.</span>Perfil das personas</h2></div>
+  <p>
+    Foram definidas três personas, correspondentes aos três papéis que interagem com o sistema
+    e que possuem objetivos e níveis de familiaridade tecnológica bastante diferentes entre si.
+    Cada perfil segue o template de quatro quadrantes adotado na disciplina: identificação,
+    demografia e comportamentos, dores e necessidades, e potenciais soluções.
+  </p>
+
+  <!-- PERSONA 1 -->
+  <div class="persona">
+    <div class="cabecalho">Persona 1 &mdash; Sérgio Almeida <span>&middot; Proprietário da oficina (usuário administrador)</span></div>
+    <table class="quadrantes">
+      <tr>
+        <td class="retrato">
+          <span class="titulo-q">1. Nome e desenho</span>
+          <img src="imagens/persona-sergio.png" alt="Ilustração da persona Sérgio">
+          <div class="nome">Sérgio Almeida</div>
+          <div class="frase">&ldquo;Eu sei consertar carro, o que me atrapalha é a papelada.&rdquo;</div>
+          <div class="papel">O dono sobrecarregado</div>
+        </td>
+        <td>
+          <span class="titulo-q">2. Demografia e comportamentos</span>
+          <ul>
+            <li>48 anos, casado, dois filhos</li>
+            <li>Mora e trabalha na zona leste de São Paulo</li>
+            <li>Ensino médio completo e curso técnico em mecânica</li>
+            <li>Proprietário da oficina há 18 anos, com 2 funcionários</li>
+            <li>Usa celular Android intermediário; WhatsApp é seu principal canal</li>
+            <li>Nunca usou um sistema de gestão; desconfia de ferramentas complexas e de mensalidades altas</li>
+            <li>Controla tudo em caderno pautado e blocos de orçamento em papel</li>
+            <li>Trabalha de 7h às 19h e resolve a parte administrativa à noite</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="titulo-q">3. Dores e necessidades</span>
+          <ul>
+            <li>Não sabe, a qualquer momento, quantos serviços estão em andamento e em que etapa</li>
+            <li>Refaz orçamentos porque perde a anotação original ou não detalha as peças</li>
+            <li>Não consegue comprovar ao cliente o que havia sido combinado</li>
+            <li>Perde tempo atendendo telefonemas de clientes pedindo notícias</li>
+            <li>Não tem visão do faturamento e da margem real do mês</li>
+            <li>Teme que um sistema seja difícil e o faça perder mais tempo do que ganha</li>
+          </ul>
+        </td>
+        <td>
+          <span class="titulo-q">4. Potenciais soluções</span>
+          <ul>
+            <li>Orçamento no celular a partir de catálogo de serviços e peças, com valor calculado automaticamente</li>
+            <li>Painel inicial com os serviços em andamento agrupados por etapa</li>
+            <li>Histórico imutável de cada alteração de escopo, com data, item e valor</li>
+            <li>Aprovação do orçamento pelo cliente registrada no sistema</li>
+            <li>Resumo financeiro simples do mês: entradas, custo de peças e margem</li>
+            <li>Cadastro assistido e interface com poucos campos por tela</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- PERSONA 2 -->
+  <div class="persona">
+    <div class="cabecalho">Persona 2 &mdash; Diego Martins <span>&middot; Mecânico da oficina (usuário operacional)</span></div>
+    <table class="quadrantes">
+      <tr>
+        <td class="retrato">
+          <span class="titulo-q">1. Nome e desenho</span>
+          <img src="imagens/persona-diego.png" alt="Ilustração da persona Diego">
+          <div class="nome">Diego Martins</div>
+          <div class="frase">&ldquo;Só me diz qual carro é o próximo que eu resolvo.&rdquo;</div>
+          <div class="papel">O executor prático</div>
+        </td>
+        <td>
+          <span class="titulo-q">2. Demografia e comportamentos</span>
+          <ul>
+            <li>26 anos, solteiro, mora com a família</li>
+            <li>Ensino médio completo, curso técnico em andamento</li>
+            <li>Mecânico contratado, 3 anos na oficina</li>
+            <li>Nativo digital: usa o celular com desenvoltura o dia inteiro</li>
+            <li>Aprende aplicativos por tentativa e erro, sem ler instruções</li>
+            <li>Trabalha com as mãos sujas de graxa; o celular fica no bolso ou na bancada</li>
+            <li>Consulta vídeos e fóruns técnicos para resolver defeitos incomuns</li>
+            <li>Recebe as ordens de serviço verbalmente ou pelo caderno do Sérgio</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="titulo-q">3. Dores e necessidades</span>
+          <ul>
+            <li>Não sabe a ordem de prioridade dos veículos e precisa interromper o Sérgio para perguntar</li>
+            <li>Recebe descrições vagas do defeito relatado pelo cliente</li>
+            <li>Descobre peças adicionais no meio do serviço e não tem como registrar isso na hora</li>
+            <li>Digitar em formulários longos com as mãos sujas é inviável</li>
+            <li>Fica sem saber se o cliente aprovou o serviço extra, e o carro para</li>
+            <li>Precisa refazer explicações do que fez para o Sérgio repassar ao cliente</li>
+          </ul>
+        </td>
+        <td>
+          <span class="titulo-q">4. Potenciais soluções</span>
+          <ul>
+            <li>Fila de serviços ordenada por prioridade, visível na tela inicial</li>
+            <li>Mudança de etapa do serviço em um único toque em botões grandes</li>
+            <li>Registro de observações e de peças extras por ditado de voz</li>
+            <li>Registro fotográfico anexado ao serviço, direto da câmera</li>
+            <li>Notificação clara quando o cliente aprova ou recusa um item adicional</li>
+            <li>Interface tolerante ao toque impreciso, com alvos amplos e poucos campos de texto</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- PERSONA 3 -->
+  <div class="persona">
+    <div class="cabecalho">Persona 3 &mdash; Patrícia Nogueira <span>&middot; Cliente da oficina (usuária externa)</span></div>
+    <table class="quadrantes">
+      <tr>
+        <td class="retrato">
+          <span class="titulo-q">1. Nome e desenho</span>
+          <img src="imagens/persona-patricia.png" alt="Ilustração da persona Patrícia">
+          <div class="nome">Patrícia Nogueira</div>
+          <div class="frase">&ldquo;Não quero desconto, quero saber o que estão fazendo no meu carro.&rdquo;</div>
+          <div class="papel">A cliente que precisa de previsibilidade</div>
+        </td>
+        <td>
+          <span class="titulo-q">2. Demografia e comportamentos</span>
+          <ul>
+            <li>35 anos, analista administrativa, mora com o companheiro</li>
+            <li>Ensino superior completo</li>
+            <li>Renda familiar de cerca de 6 salários mínimos</li>
+            <li>Usa o carro diariamente para trabalhar; depende dele</li>
+            <li>Fluente em aplicativos de banco, transporte e delivery</li>
+            <li>Acostumada a rastrear pedidos e a receber atualizações automáticas</li>
+            <li>Não entende de mecânica e teme ser passada para trás</li>
+            <li>Prefere resolver por mensagem; evita ligações no horário de trabalho</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="titulo-q">3. Dores e necessidades</span>
+          <ul>
+            <li>Fica sem qualquer informação enquanto o carro está na oficina</li>
+            <li>Precisa ligar repetidamente para saber do andamento e do prazo</li>
+            <li>Recebe orçamento verbal, sem detalhamento de peças e mão de obra</li>
+            <li>É surpreendida por valor final acima do combinado</li>
+            <li>Não tem previsão confiável de quando poderá buscar o carro</li>
+            <li>Não guarda registro do que já foi trocado no veículo</li>
+          </ul>
+        </td>
+        <td>
+          <span class="titulo-q">4. Potenciais soluções</span>
+          <ul>
+            <li>Link de acompanhamento por navegador, sem instalar aplicativo</li>
+            <li>Orçamento digital com itens, valores e prazo, aprovável pelo celular</li>
+            <li>Notificação automática a cada mudança de etapa do serviço</li>
+            <li>Pedido de aprovação obrigatório para qualquer item que altere o valor</li>
+            <li>Previsão de entrega visível e atualizada</li>
+            <li>Histórico de serviços do veículo acessível a qualquer momento</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- ======================== 4. JORNADAS ========================== -->
+<section class="secao secao-jornada">
+  <div class="linha-titulo"><h2><span class="num">4.</span>Mapa da jornada do usuário</h2></div>
+  <p>
+    Para cada persona foi mapeada a jornada completa no cenário atual, sem a solução
+    implantada, de modo a evidenciar onde estão as maiores fricções. Cada mapa apresenta as
+    fases da experiência e, em cada uma delas, as ações realizadas, os pensamentos do usuário,
+    a emoção predominante, os pontos de contato utilizados, as dores observadas e as
+    oportunidades de projeto decorrentes.
+  </p>
+  <p>
+    A curva de emoção que acompanha cada mapa sintetiza a variação da satisfação ao longo da
+    jornada, permitindo identificar visualmente os vales onde a intervenção de design tem maior
+    potencial de impacto.
+  </p>
+
+  <!-- JORNADA 1 -->
+  <h3>4.1 Jornada de Sérgio &mdash; proprietário da oficina</h3>
+
+  <div class="grafico">
+    <svg viewBox="0 0 700 210" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="30"  x2="690" y2="30"  stroke="#e3eaec" stroke-width="1"/>
+      <line x1="40" y1="94"  x2="690" y2="94"  stroke="#e3eaec" stroke-width="1"/>
+      <line x1="40" y1="158" x2="690" y2="158" stroke="#e3eaec" stroke-width="1"/>
+      <text x="0" y="34"  font-size="10" fill="#6b7785">alta</text>
+      <text x="0" y="98"  font-size="10" fill="#6b7785">média</text>
+      <text x="0" y="162" font-size="10" fill="#6b7785">baixa</text>
+      <polyline points="70,62 194,126 318,126 442,94 566,94 660,126"
+                fill="none" stroke="#0f5c63" stroke-width="3"/>
+      <circle cx="70"  cy="62"  r="5" fill="#0f5c63"/>
+      <circle cx="194" cy="126" r="5" fill="#e07a3f"/>
+      <circle cx="318" cy="126" r="5" fill="#e07a3f"/>
+      <circle cx="442" cy="94"  r="5" fill="#0f5c63"/>
+      <circle cx="566" cy="94"  r="5" fill="#0f5c63"/>
+      <circle cx="660" cy="126" r="5" fill="#e07a3f"/>
+      <text x="70"  y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Recepção</text>
+      <text x="194" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Orçamento</text>
+      <text x="318" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Aprovação</text>
+      <text x="442" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Execução</text>
+      <text x="566" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Entrega</text>
+      <text x="660" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Pós-serviço</text>
+    </svg>
+    <div class="legenda">Curva de emoção de Sérgio ao longo da jornada atual</div>
+  </div>
+
+  <table class="jornada">
+    <thead>
+      <tr>
+        <th>Fase</th>
+        <th>1. Recepção do veículo</th>
+        <th>2. Elaboração do orçamento</th>
+        <th>3. Aprovação e espera</th>
+        <th>4. Execução do serviço</th>
+        <th>5. Entrega e pagamento</th>
+        <th>6. Pós-serviço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Ações</th>
+        <td>Recebe o cliente, ouve a reclamação e anota placa e nome no caderno</td>
+        <td>Faz o diagnóstico inicial, liga para fornecedores para checar preço de peças e calcula o valor de cabeça</td>
+        <td>Informa o valor verbalmente ou por WhatsApp e aguarda o retorno do cliente</td>
+        <td>Distribui o serviço para Diego, acompanha e resolve imprevistos de peça</td>
+        <td>Explica o que foi feito, negocia diferenças e recebe o pagamento</td>
+        <td>Anota o valor recebido em uma folha e tenta fechar as contas do mês à noite</td>
+      </tr>
+      <tr>
+        <th>Pensamentos</th>
+        <td>&ldquo;Depois eu passo isso a limpo.&rdquo;</td>
+        <td>&ldquo;Se eu errar o preço, trabalho de graça.&rdquo;</td>
+        <td>&ldquo;Será que ele aprovou? Deixo o carro parado ou começo?&rdquo;</td>
+        <td>&ldquo;Apareceu mais coisa, preciso avisar o cliente.&rdquo;</td>
+        <td>&ldquo;Espero que ele lembre do que combinamos.&rdquo;</td>
+        <td>&ldquo;Trabalhei o mês todo, mas não sei quanto sobrou.&rdquo;</td>
+      </tr>
+      <tr>
+        <th>Emoção</th>
+        <td class="emocao">&#128522;</td>
+        <td class="emocao">&#128533;</td>
+        <td class="emocao">&#128533;</td>
+        <td class="emocao">&#128528;</td>
+        <td class="emocao">&#128528;</td>
+        <td class="emocao">&#128577;</td>
+      </tr>
+      <tr>
+        <th>Pontos de contato</th>
+        <td>Balcão da oficina, caderno pautado</td>
+        <td>Telefone, catálogos de fornecedor, memória</td>
+        <td>WhatsApp, telefone</td>
+        <td>Conversa presencial com Diego, caderno</td>
+        <td>Bloco de orçamento em papel, maquininha de cartão</td>
+        <td>Folha de anotações, calculadora</td>
+      </tr>
+      <tr>
+        <th>Dores</th>
+        <td>
+          <ul><li>Registro incompleto e ilegível</li><li>Retrabalho de passar a limpo</li></ul>
+        </td>
+        <td>
+          <ul><li>Preço estimado sem base</li><li>Risco de prejuízo na margem</li></ul>
+        </td>
+        <td>
+          <ul><li>Não sabe quais orçamentos estão pendentes</li><li>Espaço e tempo ociosos</li></ul>
+        </td>
+        <td>
+          <ul><li>Interrupções constantes</li><li>Alteração de escopo não registrada</li></ul>
+        </td>
+        <td>
+          <ul><li>Divergência sobre o combinado</li><li>Desconto para evitar conflito</li></ul>
+        </td>
+        <td>
+          <ul><li>Sem visão de faturamento e margem</li><li>Trabalho administrativo noturno</li></ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Oportunidades</th>
+        <td>
+          <ul><li>Abertura de ordem de serviço em poucos campos, com placa e telefone</li></ul>
+        </td>
+        <td>
+          <ul><li>Catálogo de serviços e peças com preços salvos e cálculo automático</li></ul>
+        </td>
+        <td>
+          <ul><li>Painel de orçamentos por situação e aprovação digital registrada</li></ul>
+        </td>
+        <td>
+          <ul><li>Solicitação de aprovação de item extra direto do sistema</li></ul>
+        </td>
+        <td>
+          <ul><li>Comprovante detalhado com histórico de alterações e assinatura de aceite</li></ul>
+        </td>
+        <td>
+          <ul><li>Resumo mensal automático de receitas, custo de peças e margem</li></ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- JORNADA 2 -->
+  <h3 class="secao">4.2 Jornada de Diego &mdash; mecânico da oficina</h3>
+
+  <div class="grafico">
+    <svg viewBox="0 0 700 210" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="30"  x2="690" y2="30"  stroke="#e3eaec" stroke-width="1"/>
+      <line x1="40" y1="94"  x2="690" y2="94"  stroke="#e3eaec" stroke-width="1"/>
+      <line x1="40" y1="158" x2="690" y2="158" stroke="#e3eaec" stroke-width="1"/>
+      <text x="0" y="34"  font-size="10" fill="#6b7785">alta</text>
+      <text x="0" y="98"  font-size="10" fill="#6b7785">média</text>
+      <text x="0" y="162" font-size="10" fill="#6b7785">baixa</text>
+      <polyline points="70,94 194,62 318,126 442,62 566,126 660,94"
+                fill="none" stroke="#0f5c63" stroke-width="3"/>
+      <circle cx="70"  cy="94"  r="5" fill="#0f5c63"/>
+      <circle cx="194" cy="62"  r="5" fill="#0f5c63"/>
+      <circle cx="318" cy="126" r="5" fill="#e07a3f"/>
+      <circle cx="442" cy="62"  r="5" fill="#0f5c63"/>
+      <circle cx="566" cy="126" r="5" fill="#e07a3f"/>
+      <circle cx="660" cy="94"  r="5" fill="#0f5c63"/>
+      <text x="70"  y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Recebe ordem</text>
+      <text x="194" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Diagnóstico</text>
+      <text x="318" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Peça extra</text>
+      <text x="442" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Reparo</text>
+      <text x="566" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Relato</text>
+      <text x="660" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Encerramento</text>
+    </svg>
+    <div class="legenda">Curva de emoção de Diego ao longo da jornada atual</div>
+  </div>
+
+  <table class="jornada">
+    <thead>
+      <tr>
+        <th>Fase</th>
+        <th>1. Recebimento da ordem</th>
+        <th>2. Diagnóstico do defeito</th>
+        <th>3. Necessidade de peça extra</th>
+        <th>4. Execução do reparo</th>
+        <th>5. Relato do que foi feito</th>
+        <th>6. Encerramento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Ações</th>
+        <td>Pergunta ao Sérgio qual carro atacar ou procura o caderno na bancada</td>
+        <td>Inspeciona o veículo, testa componentes e identifica a causa</td>
+        <td>Interrompe o serviço, procura o Sérgio e relata verbalmente o que mais precisa</td>
+        <td>Executa o reparo, troca peças e testa o resultado</td>
+        <td>Explica verbalmente ao Sérgio tudo o que foi feito, para ele repassar ao cliente</td>
+        <td>Estaciona o veículo e passa para o próximo da fila</td>
+      </tr>
+      <tr>
+        <th>Pensamentos</th>
+        <td>&ldquo;Qual é a prioridade hoje?&rdquo;</td>
+        <td>&ldquo;Achei o problema, agora é resolver.&rdquo;</td>
+        <td>&ldquo;Vou ter que parar tudo até alguém aprovar.&rdquo;</td>
+        <td>&ldquo;Isso eu faço bem, é o meu trabalho.&rdquo;</td>
+        <td>&ldquo;Já expliquei duas vezes e vai faltar detalhe.&rdquo;</td>
+        <td>&ldquo;Qual o próximo? Vou perguntar de novo.&rdquo;</td>
+      </tr>
+      <tr>
+        <th>Emoção</th>
+        <td class="emocao">&#128528;</td>
+        <td class="emocao">&#128522;</td>
+        <td class="emocao">&#128533;</td>
+        <td class="emocao">&#128522;</td>
+        <td class="emocao">&#128533;</td>
+        <td class="emocao">&#128528;</td>
+      </tr>
+      <tr>
+        <th>Pontos de contato</th>
+        <td>Conversa com o proprietário, caderno</td>
+        <td>Veículo, ferramentas, vídeos técnicos no celular</td>
+        <td>Conversa presencial, WhatsApp do Sérgio</td>
+        <td>Veículo, peças, bancada</td>
+        <td>Conversa presencial</td>
+        <td>Pátio da oficina</td>
+      </tr>
+      <tr>
+        <th>Dores</th>
+        <td>
+          <ul><li>Depende do proprietário para saber a fila</li><li>Descrição vaga do defeito relatado</li></ul>
+        </td>
+        <td>
+          <ul><li>Sem histórico do veículo para consultar</li></ul>
+        </td>
+        <td>
+          <ul><li>Serviço paralisado esperando aprovação</li><li>Nada fica registrado</li></ul>
+        </td>
+        <td>
+          <ul><li>Mãos sujas impedem uso do celular</li></ul>
+        </td>
+        <td>
+          <ul><li>Informação se perde na transmissão verbal</li><li>Retrabalho de explicar</li></ul>
+        </td>
+        <td>
+          <ul><li>Nenhum registro do serviço concluído</li></ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Oportunidades</th>
+        <td>
+          <ul><li>Fila de serviços ordenada por prioridade na tela inicial</li></ul>
+        </td>
+        <td>
+          <ul><li>Histórico de serviços do veículo pela placa</li></ul>
+        </td>
+        <td>
+          <ul><li>Inclusão de item extra pelo próprio mecânico, disparando aprovação ao cliente</li></ul>
+        </td>
+        <td>
+          <ul><li>Botões grandes para mudança de etapa e registro por voz</li></ul>
+        </td>
+        <td>
+          <ul><li>Registro de observações e fotos anexadas ao serviço</li></ul>
+        </td>
+        <td>
+          <ul><li>Encerramento em um toque, liberando o próximo item da fila</li></ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- JORNADA 3 -->
+  <h3 class="secao">4.3 Jornada de Patrícia &mdash; cliente da oficina</h3>
+
+  <div class="grafico">
+    <svg viewBox="0 0 700 210" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="30"  x2="690" y2="30"  stroke="#e3eaec" stroke-width="1"/>
+      <line x1="40" y1="94"  x2="690" y2="94"  stroke="#e3eaec" stroke-width="1"/>
+      <line x1="40" y1="158" x2="690" y2="158" stroke="#e3eaec" stroke-width="1"/>
+      <text x="0" y="34"  font-size="10" fill="#6b7785">alta</text>
+      <text x="0" y="98"  font-size="10" fill="#6b7785">média</text>
+      <text x="0" y="162" font-size="10" fill="#6b7785">baixa</text>
+      <polyline points="70,126 194,94 318,126 442,158 566,94 660,126"
+                fill="none" stroke="#0f5c63" stroke-width="3"/>
+      <circle cx="70"  cy="126" r="5" fill="#e07a3f"/>
+      <circle cx="194" cy="94"  r="5" fill="#0f5c63"/>
+      <circle cx="318" cy="126" r="5" fill="#e07a3f"/>
+      <circle cx="442" cy="158" r="6" fill="#c0392b"/>
+      <circle cx="566" cy="94"  r="5" fill="#0f5c63"/>
+      <circle cx="660" cy="126" r="5" fill="#e07a3f"/>
+      <text x="70"  y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Percebe falha</text>
+      <text x="194" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Busca oficina</text>
+      <text x="318" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Entrega carro</text>
+      <text x="442" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Espera</text>
+      <text x="566" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Retirada</text>
+      <text x="660" y="192" font-size="9.5" fill="#10333a" text-anchor="middle">Pós-serviço</text>
+    </svg>
+    <div class="legenda">
+      Curva de emoção de Patrícia ao longo da jornada atual; o vale da fase de espera é o ponto
+      crítico da experiência
+    </div>
+  </div>
+
+  <table class="jornada">
+    <thead>
+      <tr>
+        <th>Fase</th>
+        <th>1. Percebe a falha</th>
+        <th>2. Busca e contata a oficina</th>
+        <th>3. Entrega do carro e orçamento</th>
+        <th>4. Espera pelo serviço</th>
+        <th>5. Retirada e pagamento</th>
+        <th>6. Pós-serviço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Ações</th>
+        <td>Ouve um ruído no freio e percebe que precisa levar o carro à oficina</td>
+        <td>Pede indicação a conhecidos, pesquisa avaliações e liga para confirmar se pode levar</td>
+        <td>Deixa o carro, descreve o ruído e ouve uma estimativa verbal de valor e prazo</td>
+        <td>Espera sem informação, liga duas ou três vezes para saber do andamento</td>
+        <td>Vai até a oficina, ouve a explicação do que foi feito e paga</td>
+        <td>Guarda a nota em uma pasta e tenta lembrar o que foi trocado quando surge outro problema</td>
+      </tr>
+      <tr>
+        <th>Pensamentos</th>
+        <td>&ldquo;Vou ficar sem carro justo agora.&rdquo;</td>
+        <td>&ldquo;Preciso de um lugar de confiança.&rdquo;</td>
+        <td>&ldquo;Será que esse valor é justo? Não entendo do assunto.&rdquo;</td>
+        <td>&ldquo;Ninguém me avisa nada, meu carro está lá há três dias.&rdquo;</td>
+        <td>&ldquo;Ficou mais caro do que falaram, mas não vou discutir.&rdquo;</td>
+        <td>&ldquo;Se der problema de novo, não sei o que já mexeram.&rdquo;</td>
+      </tr>
+      <tr>
+        <th>Emoção</th>
+        <td class="emocao">&#128533;</td>
+        <td class="emocao">&#128528;</td>
+        <td class="emocao">&#128533;</td>
+        <td class="emocao">&#128545;</td>
+        <td class="emocao">&#128528;</td>
+        <td class="emocao">&#128533;</td>
+      </tr>
+      <tr>
+        <th>Pontos de contato</th>
+        <td>O próprio veículo</td>
+        <td>Indicação de conhecidos, buscador, telefone</td>
+        <td>Balcão da oficina, conversa verbal</td>
+        <td>Telefone, WhatsApp sem resposta</td>
+        <td>Balcão, nota em papel, maquininha</td>
+        <td>Pasta de documentos em casa</td>
+      </tr>
+      <tr>
+        <th>Dores</th>
+        <td>
+          <ul><li>Urgência e dependência do veículo</li></ul>
+        </td>
+        <td>
+          <ul><li>Dificuldade de avaliar a confiabilidade da oficina</li></ul>
+        </td>
+        <td>
+          <ul><li>Orçamento verbal, sem detalhamento</li><li>Assimetria de conhecimento técnico</li></ul>
+        </td>
+        <td>
+          <ul><li>Ausência total de informação</li><li>Necessidade de ligar repetidas vezes</li><li>Prazo indefinido</li></ul>
+        </td>
+        <td>
+          <ul><li>Valor final acima do combinado</li><li>Sem comprovação do acordo inicial</li></ul>
+        </td>
+        <td>
+          <ul><li>Histórico do veículo disperso em papéis</li></ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Oportunidades</th>
+        <td>
+          <ul><li>Abertura de solicitação de atendimento pelo próprio celular</li></ul>
+        </td>
+        <td>
+          <ul><li>Página pública da oficina com serviços e avaliações</li></ul>
+        </td>
+        <td>
+          <ul><li>Orçamento digital detalhado, com prazo e aprovação registrada</li></ul>
+        </td>
+        <td>
+          <ul><li>Link de acompanhamento em tempo real e notificação a cada etapa concluída</li></ul>
+        </td>
+        <td>
+          <ul><li>Aprovação obrigatória de qualquer item que altere o valor e comprovante detalhado</li></ul>
+        </td>
+        <td>
+          <ul><li>Histórico digital do veículo, consultável pela placa</li></ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ==================== 5. SINTESE ============================== -->
+<section class="secao">
+  <div class="linha-titulo"><h2><span class="num">5.</span>Síntese das oportunidades de projeto</h2></div>
+  <p>
+    O cruzamento das três jornadas revela que as maiores quedas de satisfação se concentram em
+    dois momentos: a formalização do orçamento e o período de espera pelo serviço. São
+    justamente as fases em que a informação existe na cabeça de alguém, mas não está registrada
+    nem compartilhada. As prioridades de projeto abaixo derivam diretamente desse achado.
+  </p>
+
+  <table class="oportunidades">
+    <tr>
+      <th style="width:6%">#</th>
+      <th style="width:30%">Oportunidade</th>
+      <th style="width:22%">Personas atendidas</th>
+      <th>Dor que resolve</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Orçamento digital detalhado com aprovação registrada</td>
+      <td>Sérgio e Patrícia</td>
+      <td>Elimina a divergência sobre o valor combinado e dá base para a formação de preço</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Link de acompanhamento do serviço, sem instalação de aplicativo</td>
+      <td>Patrícia e Sérgio</td>
+      <td>Encerra o vale de ansiedade da espera e reduz os telefonemas de cobrança</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Fila de serviços priorizada e mudança de etapa em um toque</td>
+      <td>Diego e Sérgio</td>
+      <td>Remove a dependência do proprietário para saber o que fazer em seguida</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Solicitação de item extra pelo mecânico, com aprovação do cliente</td>
+      <td>Diego, Sérgio e Patrícia</td>
+      <td>Evita a paralisação do serviço e registra toda alteração de escopo</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Registro por voz e por foto anexado ao serviço</td>
+      <td>Diego</td>
+      <td>Viabiliza o uso do sistema em ambiente de oficina, com as mãos sujas</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Histórico do veículo por placa e resumo financeiro mensal</td>
+      <td>Sérgio e Patrícia</td>
+      <td>Substitui o caderno e a pasta de papéis por informação recuperável</td>
+    </tr>
+  </table>
+
+  <h3>5.1 Considerações finais</h3>
+  <p>
+    As três personas compartilham o mesmo problema de fundo &mdash; a informação sobre o serviço
+    não circula &mdash; mas o vivenciam de formas distintas e exigem soluções de interface
+    diferentes. Sérgio precisa de controle e de simplicidade, porque qualquer complexidade
+    adicional competirá com o tempo que ele não tem. Diego precisa de velocidade e de tolerância
+    ao contexto físico em que trabalha, com alvos grandes e o mínimo de digitação. Patrícia
+    precisa de transparência e de autonomia para se informar sem depender de ninguém.
+  </p>
+  <p>
+    Esse conjunto de exigências orientará as decisões da próxima fase do projeto, na qual serão
+    definidos os fluxos de interação e os protótipos de baixa fidelidade, buscando atender aos
+    três perfis sem sobrecarregar nenhuma das interfaces.
+  </p>
+
+  <h3>5.2 Referências</h3>
+  <ul>
+    <li>
+      LUCID SOFTWARE. <em>Software de mapeamento de jornada do cliente</em>. Disponível em:
+      https://lucid.co/pt/diagrama/mapa-da-jornada-do-cliente. Acesso em: 28 ago. 2026.
+    </li>
+    <li>
+      Material didático da disciplina de Interação Humano-Computador, semanas 1 a 3:
+      levantamento de necessidades, storytelling no modelo Pixar e construção de personas.
+    </li>
+  </ul>
+</section>
+
+</body>
+</html>

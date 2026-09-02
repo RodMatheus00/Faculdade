@@ -1,0 +1,344 @@
+@page {
+  size: A4;
+  margin: 16mm 14mm;
+}
+
+@page paisagem {
+  size: A4 landscape;
+  margin: 12mm 12mm;
+}
+
+.secao-jornada {
+  page: paisagem;
+}
+
+body {
+  font-family: "Segoe UI", Calibri, Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.capa {
+  height: 245mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  page-break-after: always;
+}
+
+.capa .instituicao {
+  font-size: 11pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b7785;
+}
+
+.capa .disciplina {
+  margin-top: 40px;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #0f5c63;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.capa h1 {
+  font-size: 24pt;
+  margin: 14px 0 6px;
+  color: #10333a;
+  line-height: 1.25;
+}
+
+.capa .subtitulo {
+  font-size: 13pt;
+  color: #4a5661;
+  font-style: italic;
+  margin-bottom: 46px;
+}
+
+.capa .regua {
+  width: 70px;
+  height: 4px;
+  background: #e07a3f;
+  margin: 0 auto 46px;
+}
+
+.capa .integrantes {
+  font-size: 11.5pt;
+}
+
+.capa .integrantes strong {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 9.5pt;
+  color: #0f5c63;
+  margin-bottom: 10px;
+}
+
+.capa .integrantes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.capa .integrantes li {
+  margin: 3px 0;
+}
+
+.capa .rodape {
+  margin-top: 56px;
+  font-size: 10.5pt;
+  color: #6b7785;
+}
+
+h2 {
+  font-size: 14pt;
+  color: #0f5c63;
+  margin: 0 0 4px;
+  page-break-after: avoid;
+}
+
+h2 .num {
+  color: #e07a3f;
+  margin-right: 8px;
+}
+
+.linha-titulo {
+  border-bottom: 2px solid #cfd8dd;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 12pt;
+  color: #10333a;
+  margin: 18px 0 6px;
+  page-break-after: avoid;
+}
+
+p {
+  text-align: justify;
+  margin: 7px 0;
+}
+
+ul, ol {
+  margin: 7px 0 7px 20px;
+  padding: 0;
+}
+
+li {
+  margin: 3px 0;
+}
+
+.secao {
+  page-break-before: always;
+}
+
+/* ---------- Storytelling ---------- */
+
+.pixar {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.pixar td {
+  border: 1px solid #cfd8dd;
+  padding: 9px 11px;
+  vertical-align: top;
+}
+
+.pixar td.rotulo {
+  width: 27%;
+  background: #eef4f5;
+  font-weight: 700;
+  color: #0f5c63;
+  font-size: 10.5pt;
+}
+
+/* ---------- Personas ---------- */
+
+.persona {
+  border: 2px solid #0f5c63;
+  border-radius: 4px;
+  margin: 16px 0 6px;
+  page-break-inside: avoid;
+}
+
+.persona .cabecalho {
+  background: #0f5c63;
+  color: #fff;
+  padding: 7px 12px;
+  font-size: 11.5pt;
+  font-weight: 700;
+}
+
+.persona .cabecalho span {
+  font-weight: 400;
+  font-size: 10pt;
+  opacity: 0.85;
+}
+
+.quadrantes {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.quadrantes td {
+  border: 1px solid #b6c5cb;
+  padding: 10px 12px;
+  vertical-align: top;
+  width: 50%;
+}
+
+.quadrantes .titulo-q {
+  display: block;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #e07a3f;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.quadrantes ul {
+  margin: 0 0 0 15px;
+}
+
+.quadrantes li {
+  font-size: 10pt;
+  margin: 3px 0;
+}
+
+.retrato {
+  text-align: center;
+}
+
+.retrato img {
+  width: 116px;
+  height: 116px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0f5c63;
+}
+
+.retrato .nome {
+  font-size: 13pt;
+  font-weight: 700;
+  color: #10333a;
+  margin-top: 8px;
+}
+
+.retrato .frase {
+  font-style: italic;
+  color: #4a5661;
+  font-size: 10pt;
+  margin-top: 5px;
+}
+
+.retrato .papel {
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #e07a3f;
+  margin-top: 5px;
+}
+
+/* ---------- Jornada ---------- */
+
+.jornada {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 9.2pt;
+  margin: 10px 0;
+  page-break-inside: avoid;
+}
+
+.jornada th, .jornada td {
+  border: 1px solid #b6c5cb;
+  padding: 6px 7px;
+  vertical-align: top;
+}
+
+.jornada thead th {
+  background: #0f5c63;
+  color: #fff;
+  font-size: 9pt;
+  text-align: center;
+}
+
+.jornada thead th:first-child {
+  background: #10333a;
+  width: 15%;
+  text-align: left;
+}
+
+.jornada tbody th {
+  background: #eef4f5;
+  color: #0f5c63;
+  text-align: left;
+  font-size: 8.7pt;
+  width: 15%;
+}
+
+.jornada ul {
+  margin: 0 0 0 13px;
+}
+
+.jornada li {
+  margin: 2px 0;
+}
+
+.emocao {
+  text-align: center;
+  font-size: 14pt;
+}
+
+.grafico {
+  margin: 10px 0 4px;
+  page-break-inside: avoid;
+}
+
+.grafico svg {
+  width: 100%;
+  height: 42mm;
+}
+
+.legenda {
+  font-size: 9pt;
+  color: #555;
+  text-align: center;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.destaque {
+  background: #f4f8f9;
+  border-left: 4px solid #0f5c63;
+  padding: 9px 12px;
+  font-size: 10pt;
+  margin: 12px 0;
+}
+
+.oportunidades {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 10pt;
+  margin: 10px 0;
+}
+
+.oportunidades th, .oportunidades td {
+  border: 1px solid #b6c5cb;
+  padding: 6px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.oportunidades th {
+  background: #eef4f5;
+  color: #0f5c63;
+}

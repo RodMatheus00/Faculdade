@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Etapa 1 - Preparacao do ambiente</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+  <div class="disciplina">Fundamentos de Internet das Coisas</div>
+  <h1>Atividade Somativa 1 &mdash; Etapa 1: Preparação do ambiente</h1>
+  <div class="identificacao">
+    <span><strong>Aluno:</strong> Matheus Rodrigues</span>
+    <span><strong>Modalidade:</strong> B &mdash; Simulador</span>
+    <span><strong>Data:</strong> 28/08/2026</span>
+  </div>
+</header>
+
+<h2>1. Ambiente escolhido</h2>
+<p>
+  A atividade foi desenvolvida na <strong>Modalidade B</strong>, utilizando o
+  <strong>Wokwi Simulator</strong> (<em>wokwi.com</em>), ambiente de simulação executado no
+  navegador que reproduz fielmente o comportamento do microcontrolador ESP32 e de sensores
+  digitais de temperatura e umidade da família DHT. O simulador executa o firmware
+  MicroPython real compilado para a arquitetura Xtensa do ESP32, o que permite rodar
+  exatamente o mesmo código-fonte que seria gravado em uma placa física.
+</p>
+
+<h2>2. Recursos preparados</h2>
+<table>
+  <tr><th>Item</th><th>Configuração</th></tr>
+  <tr><td>Ferramenta de desenvolvimento</td><td>Wokwi Simulator (versão web, acesso em 28/08/2026)</td></tr>
+  <tr><td>Microcontrolador simulado</td><td>ESP32 DevKit-C V4 (Generic ESP32 module)</td></tr>
+  <tr><td>Linguagem</td><td>MicroPython</td></tr>
+  <tr><td>Firmware</td><td>MicroPython v1.28.0 (2026-04-06)</td></tr>
+  <tr><td>Sensor</td><td>Sensor digital DHT de temperatura e umidade</td></tr>
+  <tr><td>Editor de código</td><td>Editor integrado do Wokwi, arquivo <em>main.py</em></td></tr>
+  <tr><td>Console</td><td>Serial Monitor com REPL do MicroPython integrado</td></tr>
+</table>
+
+<h2>3. Procedimento realizado</h2>
+<ul>
+  <li>Acesso ao endereço <em>wokwi.com</em> e criação de um novo projeto com o template
+      <strong>MicroPython on ESP32</strong>.</li>
+  <li>Abertura do arquivo <em>main.py</em>, onde é escrito o programa em MicroPython.</li>
+  <li>Abertura do arquivo <em>diagram.json</em>, responsável pela descrição do circuito
+      (placa, sensor e ligações elétricas).</li>
+  <li>Verificação da disponibilidade do painel de simulação, com os controles de
+      iniciar, pausar e reiniciar a execução, e do Serial Monitor.</li>
+</ul>
+
+<h2>4. Evidência</h2>
+<figure>
+  <img src="../prints/etapa1-ambiente.png" alt="Tela do Wokwi Simulator com o ambiente preparado">
+  <figcaption>
+    Figura 1 &mdash; Ambiente de desenvolvimento Wokwi Simulator preparado: à esquerda o editor
+    com o arquivo <em>main.py</em> e as abas <em>diagram.json</em> e <em>Library Manager</em>;
+    à direita o circuito com o ESP32 e o sensor DHT, além do painel de simulação e do
+    Serial Monitor.
+  </figcaption>
+</figure>
+
+<div class="nota">
+  <strong>Observação:</strong> por se tratar de ambiente de simulação (Modalidade B), não há
+  instalação local de drivers USB-serial nem de IDE, uma vez que todo o fluxo de edição,
+  compilação e execução ocorre no próprio navegador. O ambiente encontra-se apto à
+  realização das Etapas 2 e 3.
+</div>
+
+</body>
+</html>

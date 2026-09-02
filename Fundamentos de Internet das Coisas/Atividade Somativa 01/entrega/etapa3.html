@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Etapa 3 - Leitura do sensor DHT</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+  <div class="disciplina">Fundamentos de Internet das Coisas</div>
+  <h1>Atividade Somativa 1 &mdash; Etapa 3: Leitura do sensor DHT</h1>
+  <div class="identificacao">
+    <span><strong>Aluno:</strong> Matheus Rodrigues</span>
+    <span><strong>Modalidade:</strong> B &mdash; Simulador</span>
+    <span><strong>Data:</strong> 28/08/2026</span>
+  </div>
+</header>
+
+<h2>1. Objetivo</h2>
+<p>
+  Programar o ESP32 em MicroPython para realizar a leitura periódica dos dados de temperatura
+  e umidade fornecidos pelo sensor digital DHT, exibindo os resultados no console serial.
+</p>
+
+<div class="nota">
+  <strong>Sobre o modelo do sensor:</strong> o simulador Wokwi disponibiliza apenas o
+  componente DHT22 da família DHT. No MicroPython, ambos os modelos são atendidos pelo mesmo
+  módulo nativo <em>dht</em>, mudando apenas a classe instanciada
+  (<em>dht.DHT11</em> ou <em>dht.DHT22</em>), já que diferem no protocolo de codificação dos
+  bits e na resolução. Por isso o código foi escrito com a constante <em>MODELO</em>: a
+  execução aqui documentada usa <em>DHT22</em>, e para o kit físico com DHT11 basta alterar
+  essa única linha para <em>"DHT11"</em>, sem qualquer outra modificação na lógica.
+</div>
+
+<h2>2. Lógica de funcionamento</h2>
+<ul>
+  <li>Instancia o sensor no GPIO 15 conforme o modelo definido na constante <em>MODELO</em>.</li>
+  <li>A função <em>ler_sensor()</em> dispara uma medição com <em>measure()</em> e retorna a
+      temperatura em graus Celsius e a umidade relativa em porcentagem.</li>
+  <li>A função <em>classificar()</em> aplica uma regra simples de monitoramento, sinalizando
+      <em>ALERTA</em> para calor ou umidade excessivos, <em>ATENCAO</em> para frio ou ar seco,
+      e <em>NORMAL</em> na faixa de conforto.</li>
+  <li>O laço principal executa dez leituras espaçadas por dois segundos, tratando eventuais
+      falhas de comunicação com o sensor por meio de <em>try/except OSError</em>, de modo que
+      uma leitura perdida não interrompa o monitoramento.</li>
+</ul>
+
+<h2>3. Código-fonte (main.py)</h2>
+<pre>"""
+Fundamentos de Internet das Coisas - Atividade Somativa 1
+Etapa 3 - Leitura de temperatura e umidade com ESP32 e sensor DHT
+Modalidade B - Simulador Wokwi (MicroPython)
+"""
+
+import time
+import dht
+from machine import Pin
+
+MODELO = "DHT22"
+PINO_DADOS = 15
+INTERVALO_S = 2
+TOTAL_LEITURAS = 10
+
+pino = Pin(PINO_DADOS)
+sensor = dht.DHT11(pino) if MODELO == "DHT11" else dht.DHT22(pino)
+
+
+def ler_sensor():
+    """Faz uma medicao e devolve (temperatura_c, umidade_pct)."""
+    sensor.measure()
+    return sensor.temperature(), sensor.humidity()
+
+
+def classificar(temperatura, umidade):
+    if temperatura &gt; 30 or umidade &gt; 70:
+        return "ALERTA"
+    if temperatura &lt; 15 or umidade &lt; 30:
+        return "ATENCAO"
+    return "NORMAL"
+
+
+print("=" * 68)
+print(" ESP32 + sensor {} - Monitoramento de Temperatura e Umidade".format(MODELO))
+print(" Pino de dados: GPIO {} | Intervalo: {} s".format(PINO_DADOS, INTERVALO_S))
+print("=" * 68)
+
+leitura = 1
+while leitura &lt;= TOTAL_LEITURAS:
+    try:
+        temperatura, umidade = ler_sensor()
+        estado = classificar(temperatura, umidade)
+        print(
+            "Leitura {:02d} | Temperatura: {:&gt;5.1f} C | Umidade: {:&gt;5.1f} % | Status: {}".format(
+                leitura, temperatura, umidade, estado
+            )
+        )
+    except OSError as erro:
+        print("Leitura {:02d} | Falha na leitura do sensor: {}".format(leitura, erro))
+
+    leitura += 1
+    time.sleep(INTERVALO_S)
+
+print("=" * 68)
+print("Monitoramento encerrado apos {} leituras.".format(TOTAL_LEITURAS))</pre>
+
+<div class="quebra"></div>
+
+<h2>4. Resultado da execução</h2>
+<p>
+  O sensor foi configurado no simulador com temperatura de 26,5 °C e umidade relativa de 55%.
+  A saída obtida no Serial Monitor foi a seguinte:
+</p>
+
+<pre>====================================================================
+ ESP32 + sensor DHT22 - Monitoramento de Temperatura e Umidade
+ Pino de dados: GPIO 15 | Intervalo: 2 s
+====================================================================
+Leitura 01 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 02 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 03 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 04 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 05 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 06 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 07 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 08 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 09 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+Leitura 10 | Temperatura:  26.5 C | Umidade:  55.0 % | Status: NORMAL
+====================================================================
+Monitoramento encerrado apos 10 leituras.</pre>
+
+<h2>5. Evidência</h2>
+<figure>
+  <img src="../prints/etapa3-execucao.png" alt="Codigo-fonte e resultado da execucao no Wokwi">
+  <figcaption>
+    Figura 1 &mdash; Código-fonte em MicroPython à esquerda e, no canto inferior direito, o
+    Serial Monitor exibindo as leituras de temperatura e umidade obtidas do sensor DHT
+    conectado ao ESP32.
+  </figcaption>
+</figure>
+
+<h2>6. Conclusão</h2>
+<p>
+  A comunicação entre o ESP32 e o sensor DHT foi estabelecida com sucesso pelo barramento
+  digital de um fio no GPIO 15. As dez leituras foram concluídas sem falhas, com os valores
+  correspondendo exatamente aos parâmetros configurados no sensor, o que valida tanto a
+  montagem do circuito quanto a lógica implementada em MicroPython.
+</p>
+
+</body>
+</html>
